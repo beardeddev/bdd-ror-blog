@@ -1,0 +1,31 @@
+<div class="admin-panel align-right">
+    <%= admin_add_link_to(new_admin_category_path) %>
+    &nbsp; <%= admin_destroy_selected_to %>
+</div>
+<% form_tag '/categorys/destroy/' do %>
+<table>
+	<thead>
+		<th><%= check_box_tag :select_all %></th>
+		<th>Название</th>
+		<th>Состояние</th>
+		<th>Создано</th>
+		<th>Изменено</th>
+		<th></th>
+		<th></th>
+	</thead>
+	<tbody>
+		<% @categories.each do |category| %>
+		<tr class="<%= cycle('even', 'odd') %>">
+			<td><%= check_box_tag :ids, category.id %></td>
+			<td><%= link_to category.title, category_path(category), :target => '_blank' %></td>			
+			<td><%= status_image_tag(category.status_id) %></td>
+			<td><%= category.created_at.strftime("%d.%M.%Y") %></td>
+			<td><%= category.updated_at.strftime("%d.%M.%Y") %></td>
+			<td><%= edit_admin_link_to edit_admin_category_path(category) %></td>
+			<td><%= destroy_admin_link_to category %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<% end %>
+

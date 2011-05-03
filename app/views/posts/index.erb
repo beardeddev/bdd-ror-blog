@@ -1,0 +1,11 @@
+<% @posts.each do |post| %>
+    <div class="post">
+      <h2 class="title"><%= link_to post.title, post %></h2>
+      <p class="poster"><%= Russian::strftime(post.created_at, "%d %B %Y, %H:%M") %> Добавил: <%= post.user.login %></p>
+      <div class="entry">
+        <p><%= post.description %></p>
+      </div>
+      <div class="comments">Добавлено в
+        категорию:&nbsp;<%= render :partial => '/posts/category', :collection => post.categories, :spacer_template => "/posts/category_separator" %>&nbsp;|&nbsp;<%= link_to "Комментариев (#{post.comments_count || 0})", "#{post_path(post)}#comments" %>&nbsp;|&nbsp;Просмотров:&nbsp;<%= post.hits %></div>
+    </div>
+<% end %>

@@ -1,0 +1,38 @@
+<% form_for [:admin, @user] do |form| %>
+	<%= form.error_messages %>
+    <ol>
+        <li>
+            <%= form.label :login %>
+            <%= form.text_field :login %>
+        </li>
+		<li>
+            <%= form.label :email %>
+            <%= form.text_field :email %>
+        </li>
+        <% if @user.new_record? %>
+        <li>
+        	<%= form.label :password %>
+            <%= form.password_field :password %>
+        </li>
+        <li>
+        	<%= form.label :password_confirmation %>
+            <%= form.password_field :password_confirmation %>
+        </li>
+        <% end %>
+        <li>
+            <%= form.label :roles %>
+            <br/>
+            <% @roles.each do |role| %>
+                <%= check_box_tag "role_#{role.id}", role.id, @user.roles.include?(role), :name => 'roles[]' %>
+                <%= label_tag "role_#{role.id}", role.title %>
+            <% end %>
+        </li>
+        <li>
+        	<%= form.label :status_id %>
+            <%= form.status_select_field :status_id %>
+        </li>
+        <li>
+            <%= form.submit 'Сохранить' %>
+        </li>
+	</ol>
+<% end %>

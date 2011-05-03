@@ -1,0 +1,12 @@
+<div class="box">
+    <!-- Box Head -->
+    <div class="box-head">
+        <h2 class="left"><%= @page.title %></h2>
+    </div>
+    <div class="admin-panel align-right">
+       <%= admin_add_link_to(new_admin_post_path) %>
+        &nbsp; <%= admin_destroy_selected_to %>
+    </div>
+    <div class="clear">
+    </div>
+</div>

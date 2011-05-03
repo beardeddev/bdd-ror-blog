@@ -1,0 +1,31 @@
+<div class="admin-panel align-right">
+    <%= add_link_to(new_admin_tag_path) %>
+    &nbsp; <%= destroy_selected_link_to %>
+</div>
+<% form_tag '/admin/tags/destroy/', :name => 'table', :method => 'post' do %>
+<table>
+	<thead>
+		<th><%= check_box_tag :select_all %></th>
+		<th>Название</th>
+		<th>Состояние</th>
+		<th>Создано</th>
+		<th>Изменено</th>
+		<th></th>
+		<th></th>
+	</thead>
+	<tbody>
+		<% @tags.each do |tag| %>
+		<tr class="<%= cycle('even', 'odd') %>">
+			<td><%= check_box_tag "ids_#{tag.id}", tag.id, false, :name => 'ids[]' %></td>
+			<td><%= link_to tag.title, tag_path(tag), :target => '_blank' %></td>			
+			<td><%= status_image_tag(tag.status_id) %></td>
+			<td><%= tag.created_at.strftime("%d.%M.%Y") %></td>
+			<td><%= tag.updated_at.strftime("%d.%M.%Y") %></td>
+			<td><%= edit_image_link_to edit_admin_tag_path(tag) %></td>
+			<td><%= destroy_image_link_to tag %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<% end %>
+

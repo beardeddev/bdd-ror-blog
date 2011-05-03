@@ -1,0 +1,155 @@
+Скрипт запущен Вск 13 Фев 2011 11:20:01
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> script/generate controller admin/posts index new create show edit update[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kscript generate model page title:string keywords:string description:string url:string body:text status_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgenerate model page title:string keywords:string description:string url:string body:textst[1Patus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/generate model page title:string keywords:string description:string url:string body:textstatus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+      exists  app/models/
+      exists  test/unit/
+      exists  test/fixtures/
+      create  app/models/page.rb
+wrong number of arguments (3 for 2)
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> script/generate model page title:string keywords:string description:string url:string body:textsstatus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+      exists  app/models/
+      exists  test/unit/
+      exists  test/fixtures/
+wrong number of arguments (3 for 2)
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> script/generate model page title:string keywords:string description:string url:string body:textsstatus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crscript/generate model page title:string keywords:string description:string url:string body:textstatus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuscript/generate model page title:string keywords:string description:string url:string body:textstatus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbscript/generate model page title:string keywords:string description:string url:string body:textstatus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cyscript/generate model page title:string keywords:string description:string url:string body:textstatus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C script/generate model page title:string keywords:string description:string url:string body:textstatus_id:integer[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+      exists  app/models/
+      exists  test/unit/
+      exists  test/fixtures/
+wrong number of arguments (3 for 2)
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> ruby script/generate model page title:string keywords:string description:string url:string body::textstatus_id:integer[C status_id:integer[C[C[C[C[C[C
+      exists  app/models/
+      exists  test/unit/
+      exists  test/fixtures/
+overwrite app/models/page.rb? (enter "h" for help) [Ynaqdh] y
+       force  app/models/page.rb
+      create  test/unit/page_test.rb
+      create  test/fixtures/pages.yml
+      exists  db/migrate
+      create  db/migrate/20110213092153_create_pages.rb
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> script [K/plugin install https://github.com/matthuhiggins/foreigner.git
+already installed: foreigner (https://github.com/matthuhiggins/foreigner.git).  pass --force to reinstall
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> rake db:migrate
+(in /home/dead/Projects/simpleblog)
+==  CreateStatuses: migrating =================================================
+-- create_table(:statuses)
+NOTICE:  CREATE TABLE will create implicit sequence "statuses_id_seq" for serial column "statuses.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "statuses_pkey" for table "statuses"
+   -> 0.0711s
+-- add_index(:statuses, :title, {:unique=>true})
+   -> 0.0415s
+==  CreateStatuses: migrated (0.1128s) ========================================
+
+==  CreateUsers: migrating ====================================================
+-- create_table(:users)
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+   -> 0.1566s
+-- add_index(:users, :login, {:uniqe=>true})
+   -> 0.0416s
+-- add_index(:users, :email, {:uniqe=>true})
+   -> 0.0417s
+==  CreateUsers: migrated (0.2402s) ===========================================
+
+==  CreatePages: migrating ====================================================
+-- create_table(:pages)
+NOTICE:  CREATE TABLE will create implicit sequence "pages_id_seq" for serial column "pages.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pages_pkey" for table "pages"
+   -> 0.0998s
+-- add_index(:pages, :url, {:unique=>true})
+   -> 0.0333s
+==  CreatePages: migrated (0.1334s) ===========================================
+
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> script/plugin install https://github.com/weplay/redhillonrails_core.git
+Initialized empty Git repository in /home/dead/Projects/simpleblog/vendor/plugins/redhillonrails_core/.git/
+remote: Counting objects: 37, done.[K
+remote: Compressing objects:   3% (1/29)   [Kremote: Compressing objects:   6% (2/29)   [Kremote: Compressing objects:  10% (3/29)   [Kremote: Compressing objects:  13% (4/29)   [Kremote: Compressing objects:  17% (5/29)   [Kremote: Compressing objects:  20% (6/29)   [Kremote: Compressing objects:  24% (7/29)   [Kremote: Compressing objects:  27% (8/29)   [Kremote: Compressing objects:  31% (9/29)   [Kremote: Compressing objects:  34% (10/29)   [Kremote: Compressing objects:  37% (11/29)   [Kremote: Compressing objects:  41% (12/29)   [Kremote: Compressing objects:  44% (13/29)   [Kremote: Compressing objects:  48% (14/29)   [Kremote: Compressing objects:  51% (15/29)   [Kremote: Compressing objects:  55% (16/29)   [Kremote: Compressing objects:  58% (17/29)   [Kremote: Compressing objects:  62% (18/29)   [Kremote: Compressing objects:  65% (19/29)   [Kremote: Compressing objects:  68% (20/29)   [Kremote: Compressing objects:  72% (21/29)   [Kremote: Compressing objects:  75% (22/29)   [Kremote: Compressing objects:  79% (23/29)   [Kremote: Compressing objects:  82% (24/29)   [Kremote: Compressing objects:  86% (25/29)   [Kremote: Compressing objects:  89% (26/29)   [Kremote: Compressing objects:  93% (27/29)   [Kremote: Compressing objects:  96% (28/29)   [Kremote: Compressing objects: 100% (29/29)   [Kremote: Compressing objects: 100% (29/29), done.[K
+remote: Total 37 (delta 6), reused 16 (delta 2)[K
+Unpacking objects:   2% (1/37)   Unpacking objects:   5% (2/37)   Unpacking objects:   8% (3/37)   Unpacking objects:  10% (4/37)   Unpacking objects:  13% (5/37)   Unpacking objects:  16% (6/37)   Unpacking objects:  18% (7/37)   Unpacking objects:  21% (8/37)   Unpacking objects:  24% (9/37)   Unpacking objects:  27% (10/37)   Unpacking objects:  29% (11/37)   Unpacking objects:  32% (12/37)   Unpacking objects:  35% (13/37)   Unpacking objects:  37% (14/37)   Unpacking objects:  40% (15/37)   Unpacking objects:  43% (16/37)   Unpacking objects:  45% (17/37)   Unpacking objects:  48% (18/37)   Unpacking objects:  51% (19/37)   Unpacking objects:  54% (20/37)   Unpacking objects:  56% (21/37)   Unpacking objects:  59% (22/37)   Unpacking objects:  62% (23/37)   Unpacking objects:  64% (24/37)   Unpacking objects:  67% (25/37)   Unpacking objects:  70% (26/37)   Unpacking objects:  72% (27/37)   Unpacking objects:  75% (28/37)   Unpacking objects:  78% (29/37)   Unpacking objects:  81% (30/37)   Unpacking objects:  83% (31/37)   Unpacking objects:  86% (32/37)   Unpacking objects:  89% (33/37)   Unpacking objects:  91% (34/37)   Unpacking objects:  94% (35/37)   Unpacking objects:  97% (36/37)   Unpacking objects: 100% (37/37)   Unpacking objects: 100% (37/37), done.
+From https://github.com/weplay/redhillonrails_core
+ * branch            HEAD       -> FETCH_HEAD
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> rake db:migrate --version=0
+rake aborted!
+needless argument: --version=0
+/usr/lib/ruby/1.8/optparse.rb:1266:in `parse_in_order'
+(See full trace by running task with --trace)
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> rake db:migrate --version=0[C[1Pversion=0[1Pversion=0[1Persion=0[1Prsion=0[1Psion=0[1Pion=0[1Pon=0[1Pn=0[1P=0V=0E=0R=0S=0I=0O=0N=0
+(in /home/dead/Projects/simpleblog)
+==  CreatePages: reverting ====================================================
+-- drop_table(:pages)
+   -> 0.0133s
+==  CreatePages: reverted (0.0134s) ===========================================
+
+==  CreateUsers: reverting ====================================================
+-- drop_table(:users)
+   -> 0.0039s
+==  CreateUsers: reverted (0.0040s) ===========================================
+
+==  CreateStatuses: reverting =================================================
+-- drop_table(:statuses)
+   -> 0.0020s
+==  CreateStatuses: reverted (0.0021s) ========================================
+
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> rake db:migrate VERSION=0--version=0script/plugin install https://github.com/weplay/redhillonrails_core.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crake db:migrate[K
+(in /home/dead/Projects/simpleblog)
+==  CreateStatuses: migrating =================================================
+-- create_table(:statuses)
+NOTICE:  CREATE TABLE will create implicit sequence "statuses_id_seq" for serial column "statuses.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "statuses_pkey" for table "statuses"
+   -> 0.0521s
+-- add_index(:statuses, :title, {:unique=>true})
+   -> 0.0411s
+==  CreateStatuses: migrated (0.0934s) ========================================
+
+==  CreateUsers: migrating ====================================================
+-- create_table(:users)
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+rake aborted!
+An error has occurred, this and all later migrations canceled:
+
+PGError: ERROR:  relation "status" does not exist
+: CREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), FOREIGN KEY (statuses) REFERENCES status (id)) 
+
+(See full trace by running task with --trace)
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> rake db:migrate
+(in /home/dead/Projects/simpleblog)
+==  CreateUsers: migrating ====================================================
+-- create_table(:users)
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+rake aborted!
+An error has occurred, this and all later migrations canceled:
+
+PGError: ERROR:  relation "status" does not exist
+: CREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), "status_id" integer DEFAULT 1 NOT NULL, FOREIGN KEY (statuses) REFERENCES status (id)) 
+
+(See full trace by running task with --trace)
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> rake db:migrate
+(in /home/dead/Projects/simpleblog)
+==  CreateUsers: migrating ====================================================
+-- create_table(:users)
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+rake aborted!
+An error has occurred, this and all later migrations canceled:
+
+PGError: ERROR:  column "status_id" referenced in foreign key constraint does not exist
+: CREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), FOREIGN KEY (status_id) REFERENCES statuses (id)) 
+
+(See full trace by running task with --trace)
+]2;dead@unaware-rig:...rojects/simpleblog]1;unaware-rigdead@unaware-rig:~/Projects/simpleblog> rake db:migrate
+(in /home/dead/Projects/simpleblog)
+==  CreateUsers: migrating ====================================================
+-- create_table(:users)
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+   -> 0.1331s
+-- add_index(:users, :login, {:uniqe=>true})
+   -> 0.0449s
+-- add_index(:users, :email, {:uniqe=>true})
+   -> 0.0500s
+==  CreateUsers: migrated (0.2283s) ===========================================
+
+==  CreatePages: migrating ==================================

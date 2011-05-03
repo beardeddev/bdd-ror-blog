@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8;charset=utf-8"/>
+  <title>404 - Страница не найдена</title>
+  <%= stylesheet_link_tag '404' %>
+</head>
+<body class="green">
+<div id="container">
+  <div id="leftbar">
+    <div id="headline">
+      <p class="htop">Такой страницы нет!</p>
+      <div class="hmain">
+        <h1 class="notfound"><span>404</span><br/>страница не найдена</h1>
+      </div>
+    </div>
+    <div id="textmain">
+      <p>Увы, такой страницы на сайте нет</p>
+    </div>
+    <div id="menu">
+      <%= render_navigation %>
+    </div>
+  </div>
+  <div id="rightbar">
+    <div id="countdown">
+      <p class="ctop"></p>
+      <div id="cmain">
+        Скорее всего это не то что вы искали. Возможно страница которую вы искали была удалена или перемещена.<br/>
+            Начните поиск с <a href="/" title="на главную страницу">главной страницы</a>
+      </div>
+    </div>
+    <div class="space"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>

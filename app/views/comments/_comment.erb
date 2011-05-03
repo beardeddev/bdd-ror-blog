@@ -1,0 +1,17 @@
+<div class="comment">
+  <div class="avatar">
+    <%= image_tag "noavatar.gif" %>
+  </div>
+  <div class="comment-body">
+    <div class="comment-arrow">
+    </div>
+    <div class="left_comment">
+      <div class="name">
+        Добавил&nbsp;<%= h(comment.user_name) %>&nbsp;<%= Russian::strftime(comment.created_at, "%A %d.%m.%Y %H:%M")%>
+      </div>
+      <%= h(comment.body) %>
+    </div>
+  </div>
+  <div class="clear">
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<% content_for :main_content_header  do %>
+    <% if @current_user && @current_user.admin? %>
+        <div class="admin-panel align-right">
+            <%= add_link_to(new_admin_post_path) %>&nbsp;<%= destroy_link_to @post %> &nbsp;<%= edit_link_to edit_admin_post_path(@post) %>
+        </div>
+    <% end %>
+<% end %>
+<h1><%= @post.title %></h1>
+<p class="poster">
+  <%= Russian::strftime(@post.created_at,"%d %B %Y, %H:%M") %> | Добавил: <%= @post.user.login %> в категории: <%= render :partial => '/posts/category', :collection => @post.categories, :spacer_template => "/posts/category_separator" %>&nbsp;|&nbsp;<%= link_to "Комментариев (0)", "#{post_path(@post)}#comments" %>&nbsp;|&nbsp;Просмотров:&nbsp;<%= @post.hits %>
+</p>
+<p>
+  <%= @post.description %>
+</p>
+<%= @post.body %>
+<br/>
+<a id="comments"></a>
+<%= flash_tag %>
+<% if @post.comments.active.ordered.count > 0 %>
+     <%= render :partial => '/comments/comment', :collection => @post.comments.active.ordered %>
+<% end %>
+<%= render :partial => '/comments/form' %>
+<% content_for :head do %>
+ <%= stylesheet_link_tag 'sh/shCore' %>
+ <%= stylesheet_link_tag 'sh/shCoreDefault' %>
+ <%= stylesheet_link_tag 'sh/shThemeDefault' %>
+ <script type="text/javascript">
+   $(document).ready(function(){
+       $.scrollTo('form#new_comment.fieldWithErrors:first');
+   })
+ </script>
+<% end %>
+
+<% content_for :footer do  %>
+    <%= javascript_include_tag 'sh/shCore' %>
+    <%= javascript_include_tag 'sh/shBrushCSharp' %>
+    <%= javascript_include_tag 'sh/shBrushCss' %>
+    <%= javascript_include_tag 'sh/shBrushJScript' %>
+    <%= javascript_include_tag 'sh/shBrushBash' %>
+    <%= javascript_include_tag 'sh/shBrushCpp' %>
+    <%= javascript_include_tag 'sh/shBrushSql' %>
+    <%= javascript_include_tag 'sh/shBrushRuby' %>
+    <%= javascript_include_tag 'sh/shBrushXml' %>
+    <%= javascript_include_tag 'sh/shBrushJava' %>
+    <% javascript_tag do %>
+        SyntaxHighlighter.defaults['class-name'] = "mycode";
+        SyntaxHighlighter.all();
+    <% end %>
+<% end %>
+

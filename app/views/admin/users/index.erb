@@ -1,0 +1,33 @@
+<div class="admin-panel align-right">
+    <%= add_link_to(new_admin_user_path) %>
+    &nbsp; <%= destroy_selected_link_to %>
+</div>
+<% form_tag '/admin/users/destroy/', :name => 'table', :method => :post do %>
+<table>
+	<thead>
+		<th><%= check_box_tag :select_all %></th>
+		<th>Логин</th>
+		<th>Электронный адрес</th>
+		<th>Состояние</th>
+		<th>Создано</th>
+		<th>Изменено</th>
+		<th></th>
+		<th></th>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+		<tr class="<%= cycle('even', 'odd') %>">
+			<td><%= check_box_tag "ids_#{user.id}", user.id, false, :name => 'ids[]' %></td>
+			<td><%= link_to user.login, user_path(user), :target => '_blank' %></td>
+			<td><%= link_to user.email, user_path(user), :target => '_blank' %></td>			
+			<td><%= status_image_tag(user.status_id) %></td>
+			<td><%= user.created_at.strftime("%d.%M.%Y") %></td>
+			<td><%= user.updated_at.strftime("%d.%M.%Y") %></td>
+			<td><%= edit_image_link_to edit_admin_user_path(user) %></td>
+			<td><%= destroy_image_link_to user %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<% end %>
+

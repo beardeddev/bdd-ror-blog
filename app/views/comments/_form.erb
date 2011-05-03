@@ -1,0 +1,39 @@
+<a id="comment_form"></a>
+<div class="clear"></div>
+<h3>Добавить комментарий</h3>
+<% form_for [@post, @comment], :url => "#{post_comments_path(@post)}#comment_form" do |f| %>
+    <fieldset>
+      <ol>
+        <li>
+          <%= f.label :user_name %><%= f.error_message_on(:user_name) %>
+          <div class="clear"></div>
+          <%= f.text_field :user_name %>
+        </li>
+        <li>
+          <%= f.label :email %><%= f.error_message_on(:email) %>
+          <div class="clear"></div>
+          <%= f.text_field :email %>
+        </li>
+        <li>
+          <%= f.label :website %><%= f.error_message_on(:website) %>
+          <div class="clear"></div>
+          <%= f.text_field :website %>
+        </li>
+        <li>
+          <%= f.label :body %><%= f.error_message_on(:body) %>
+          <div class="clear"></div>
+          <%= f.text_area :body %>
+        </li>
+        <li>
+          <%= f.captcha :captcha_text, captcha_path %>
+          <%= f.error_message_on(:captcha_text) %>
+        </li>
+        <li class="right">
+            <span class="space20">
+              &nbsp;
+            </span>
+            <input class="button" type="submit" value="Добавить комментарий" tabindex="5"/>
+        </li>
+      </ol>
+    </fieldset>
+<% end %>

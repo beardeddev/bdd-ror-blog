@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title><%= h(@page.title) %> - beardeddev.pp.ua</title>
+  <meta name="keywords" content="<%= h(@page.keywords) %>"/>
+  <meta name="description" content="<%= h(@page.description) %>"/>
+  <%= javascript_include_tag 'jquery-1.5.min' %>
+  <%= stylesheet_link_tag 'style' %>
+  <%= yield :head %>
+</head>
+<body>
+<div id="wrapper"><!-- Begin Wrapper -->
+  <div id="preface"><!-- Begin Top Area -->
+    <div id="left"><!-- Begin Top Area Left -->
+      <ul>
+        <% @categories.each do |category| %>
+            <li><%= link_to category.title, category %></li>
+        <% end %>
+      </ul>
+    </div>
+    <!-- End Top Area Left -->
+    <div id="right"><!-- Begin Top Area Right -->
+      <%= render_navigation :context => :admin, :level => 1 %>
+    </div>
+    <!-- End Top Area Right -->
+  </div>
+  <!-- End Top Area -->
+  <div id="header">
+    <div id="logo">
+      <h1>
+        <a href="/">beardeddev.pp.ua</a>&nbsp;
+        <small></small>
+      </h1>
+      <h2>Бывает, что лист тонет, а камень плывет</h2>
+    </div>
+    <div id="middle">
+      <p></p>
+    </div>
+    <!--
+    <div id="search">
+    </div>
+    -->
+  </div>
+  <div id="navigation" class="menu">
+    <%= render_navigation %>
+  </div>
+  <div id="main_content">
+    <div id="main_content_header">
+      <h2>
+        <%= yield :main_content_header %>
+      </h2>
+    </div>
+    <div class="clear"></div>
+    <div id="main_content_inner">
+      <%= yield %>
+    </div>
+    <div id="main_content_footer">
+    </div>
+  </div>
+  <div id="sidebar">
+    <div id="sidebar_bottom_left">
+      <div class="block block_content">
+        <div class="block_header"></div>
+        <h3>Архив</h3>
+        <ul>
+          <% @archive.each do |archive| %>
+              <li><%= archive_link_to archive %></li>
+          <% end %>
+        </ul>
+        <div class="block_bottom"></div>
+      </div>
+    </div>
+    <div id="sidebar_bottom_right">
+      <div class="block block_content">
+        <div class="block_header"></div>
+        <h3>Категории</h3>
+        <ul>
+          <% @categories.each do |category| %>
+              <li><%= link_to category.title, category %></li>
+          <% end %>
+        </ul>
+        <div class="block_bottom"></div>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both;">&nbsp;</div>
+</div>
+<div id="footer">
+  <div id="footer_regions">
+  </div>
+</div>
+<div id="footer_bottom">
+  <div id="footer_bottom_region">
+    &copy; beardeddev.pp.ua 2010 - <%= Time.now.strftime("%Y") %> | Template by
+    <a rel="nofollow" target="_blank" href="http://anthonylicari.com" title="Web Development, BlackBerry, Drupal, Wordpress Themes and Tutorials">Anthony
+      Licari</a>
+  </div>
+</div>
+<%= yield :footer %>
+<!--#include file="ga.html" -->
+</body>
+</html>

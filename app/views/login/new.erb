@@ -1,0 +1,25 @@
+<div class="box">
+  <div class="box-head">
+    <h2 class="left"><%= @page.title %></h2>
+  </div>
+
+  <%= flash_tag %>
+
+  <% form_tag "/login?return_to=#{params[:return_to]}" do |f| %>
+  <ol>
+    <li>
+       <%= label_tag :login, t('activerecord.attributes.user.login')  %>
+       <%= text_field_tag :login  %>
+    </li>
+    <li>
+       <%= label_tag :password, t('activerecord.attributes.user.password')  %>
+       <%= password_field_tag :password  %>
+    </li>
+    <li>
+      <%= submit_tag 'Вход' %>
+    </li>
+  </ol>
+  <% end %>
+  <div class="clear">
+  </div>
+</div>

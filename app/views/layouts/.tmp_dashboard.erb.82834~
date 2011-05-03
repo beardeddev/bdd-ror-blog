@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+        <title>
+        	<%= @page_info.title %>
+        </title>
+        <%= stylesheet_link_tag 'infstyle.css' %>
+		<%= yield :head %>
+    </head>
+    <body>
+        <div id="container">
+            <div id="topmenu">
+                <ul>
+                    <li>
+                        <a href="/">Блог</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+            	<% if flash[:notice] %>
+					<div class="form-message correct">
+						<%= flash[:notice] %>
+					</div>
+				<% end %>
+            	<div class="box">
+				    <div class="box-head">
+				        <h2 class="left"><%= @page_info.title %></h2>
+				    </div>				    
+					<%= yield %>
+				    <div class="clear">
+				    </div>
+				</div>                
+            </div>
+            <div class="menu">
+                <h2>Управление сайтом</h2>
+				<%= render_navigation :level => 2 %>                
+				<%= yield :sidebar %>
+            </div>            
+            <div id="footer">                
+                <div id="footerright">
+                    <a rel="nofollow" href="http://www.infscripts.com/">Design by Inf</a>
+                </div>
+                <div id="footerleft">
+                    Copyright &copy; 2009-2010 beardeddev.pp.ua
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

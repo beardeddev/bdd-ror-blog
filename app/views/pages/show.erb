@@ -1,0 +1,6 @@
+<% content_for :main_content_header do %>
+	<%= @page.title %>
+<% end %>
+<div class="post">
+    <%= render :inline => @page.body %>
+</div>

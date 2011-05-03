@@ -1,0 +1,43 @@
+<% form_for [:admin, @page] do |form| %>
+	<%= form.error_messages %>
+    <ol>
+        <li>
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+        </li>
+        <li>
+        	<%= form.label :keywords %>
+            <%= form.text_field :keywords %>
+        </li>
+        <li>
+        	<%= form.label :description %>
+            <%= form.text_field :description %>
+        </li>
+        <li>
+        	<%= form.label :url %>
+            <%= form.text_field :url %>
+        </li>
+        <li>
+        	<%= form.label :body %>
+            <%= form.text_field :body %>
+        </li>
+        <li>
+        	<%= form.label :status_id %>
+            <%= form.status_select_field :status_id %>
+        </li>
+        <li>
+            <%= form.submit 'Сохранить' %>
+        </li>
+	</ol>
+<% end %>
+<% content_for :head do %>
+	<%= javascript_include_tag 'codemirror/codemirror.js' %>
+<% end %>
+<script type="text/javascript">
+	var editor = CodeMirror.fromTextArea('page_body', {
+		height: "350px",
+	    parserfile: ["parsexml.js", "parsecss.js", "tokenizejavascript.js", "parsejavascript.js", "parsehtmlmixed.js"],
+	    stylesheet: ["/stylesheets/codemirror/xmlcolors.css", "/stylesheets/codemirror/jscolors.css", "/stylesheets/codemirror/csscolors.css"],
+	    path: "/javascripts/codemirror/"
+  	});
+</script>

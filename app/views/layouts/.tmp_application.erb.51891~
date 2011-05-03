@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/infstyle.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="topmenu">
+                <ul>
+                    <li>
+                        <a href="/">Блог</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <%= yield %>
+            </div>
+            <div class="menu">
+                <h2>Управление сайтом</h2>
+                <ul>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit amet</a>
+                    </li>                    
+                </ul>
+				<%= yield :sidebar %>
+            </div>            
+            <div id="footer">                
+                <div id="footerright">
+                    <a rel="nofollow" href="http://www.infscripts.com/">Design by Inf</a>
+                </div>
+                <div id="footerleft">
+                    Copyright &copy; 2009-2010 beardeddev.pp.ua
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

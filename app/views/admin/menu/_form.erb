@@ -1,0 +1,23 @@
+
+	<%= form.error_messages %>
+    <ol>
+        <li>
+            <%= form.label :key %>
+            <%= form.text_field :key %>
+        </li>
+        <li>
+        	<%= form.label :name %>
+            <%= form.text_field :name %>
+        </li>
+        <li>
+        	<%= form.label :url %>
+            <%= form.text_field :url %>
+        </li>
+        <li>
+        	<%= form.label :status_id %>
+            <%= form.status_select_field :status_id %>
+        </li>
+        <li>
+            <%= form.submit 'Сохранить' %>
+        </li>
+	</ol>

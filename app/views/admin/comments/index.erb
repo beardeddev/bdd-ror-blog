@@ -1,0 +1,35 @@
+<div class="admin-panel align-right">
+    <%= add_link_to(new_admin_comment_path) %>&nbsp;<%= destroy_selected_link_to %>
+</div>
+<% form_tag '/admin/comments/destroy/', :name => 'table', :method => :post do %>
+<table width="400px;">
+	<thead>
+		<th><%= check_box_tag :select_all %></th>
+        <th></th>
+		<th>Имя пользователя</th>
+		<th>Эл. адресс</th>
+        <th>Состояние</th>
+		<th>Создано</th>
+		<th></th>
+		<th></th>
+	</thead>
+	<tbody>
+		<% @comments.each do |comment| %>
+		<tr class="<%= cycle('even', 'odd') %>">
+			<td><%= check_box_tag "ids_#{comment.id}", comment.id, false, :name => 'ids[]' %></td>
+            <td><%= link_to "#{image_tag 'comment.png'}", admin_comment_path(comment), :class => "jTip", :rel => admin_comment_path(comment) %></td>
+			<td><%= link_to comment.user_name, post_path(comment.post), :target => '_blank' %></td>
+			<td><%= comment.email %></td>
+			<td><%= status_image_tag(comment.status_id) %></td>
+			<td><%= comment.created_at.strftime("%d.%M.%Y") %></td>
+			<td><%= edit_image_link_to edit_admin_comment_path(comment) %></td>
+			<td><%= destroy_image_link_to comment %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<% end %>
+<script type="text/javascript">
+  $('a.jTip').cluetip({showTitle: false});
+</script>
+

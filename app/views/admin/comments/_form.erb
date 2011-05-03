@@ -1,0 +1,28 @@
+<% form_for [:admin, @comment] do |form| %>
+	<%= form.error_messages %>
+    <ol>
+        <li>
+            <%= form.label :user_name %>
+            <%= form.text_field :user_name %>
+        </li>
+        <li>
+        	<%= form.label :email %>
+            <%= form.text_field :email %>
+        </li>
+        <li>
+        	<%= form.label :website %>
+            <%= form.text_field :website %>
+        </li>
+        <li>
+        	<%= form.label :body %>
+            <%= form.text_area :body %>
+        </li>
+        <li>
+        	<%= form.label :status_id %>
+            <%= form.status_select_field :status_id %>
+        </li>
+        <li>
+            <%= form.submit 'Сохранить' %>
+        </li>
+	</ol>
+<% end %>

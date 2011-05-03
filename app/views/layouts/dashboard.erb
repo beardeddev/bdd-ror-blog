@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+  <title>
+    <%= @page_info.title %>
+  </title>
+  <%= stylesheet_link_tag 'dashboard' %>
+  <%= javascript_include_tag 'jquery-1.5.min' %>
+  <%= javascript_include_tag 'jquery.cluetip' %>
+  <%= javascript_include_tag 'dashboard' %>
+  <%= yield :head %>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="top">
+    <h2><a href="/" title="Back to main page">beardeddev.pp.ua</a></h2>
+
+    <div id="menu">
+      <%= render_navigation :context => :admin, :level => 1 %>
+    </div>
+  </div>
+  <div id="content">
+    <div id="left">
+      <% if flash[:notice] %>
+          <div class="form-message correct">
+            <%= flash[:notice] %>
+          </div>
+      <% end %>
+      <div>
+        <%= render_navigation :renderer => :breadcrumbs, :join_with => " &gt; " %>
+      </div>
+      <br/>
+
+      <div class="box">
+        <div class="box-head">
+          <h2 class="left"><%= @page_info.title %></h2>
+        </div>
+        <%= yield %>
+        <div class="clear">
+        </div>
+      </div>
+    </div>
+    <div id="right">
+
+      <div class="menu">
+        <h2>Управление сайтом</h2>
+        <%= render_navigation :context => :admin, :level => 2 %>
+      </div>
+      <%= yield :sidebar %>
+      <% if @filter %>
+          <div class="menu">
+            <h2>Фильтр</h2>
+            <% form_for_filter(@filter) %>
+          </div>
+      <% end %>
+      <div id="clear"></div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="footer">
+      <p>Copyright 2006 Truly Simple. Design by <a href="http://www.colorlightstudio.com">Igor Penjivrag</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
